@@ -375,7 +375,7 @@ function module.create(param)
     end
     page:close()
   end
-  -- ugly solution
+  -- ugly solution, need to account for duplicate index
   for _, section in pairs(param) do -- head, body
     for functionName, content in pairs(section) do
       if type(content[1]) ~= "string" then
