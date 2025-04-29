@@ -1,3 +1,9 @@
+-- builder.lua
+-- Description: Transpile Lua code into a syntactically correct format.
+-- Author: Komodo794
+-- Date: 2025-04-29
+-- Notes: terrible code :skull:
+
 local module = {}
 module.__index = module
 
@@ -91,7 +97,7 @@ local function write_data(data)
   end
 end
 
--- // HONESTLY HAVE NO CLUE
+-- // APPEND STYLE TAG TO THE CODE LINE
 local function stylize(replacement, lookFor)
   local page = io.open("index.html", "r")
   local newData = ""
