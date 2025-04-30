@@ -1,8 +1,8 @@
--- builder.lua
--- Description: Transpile Lua code into a syntactically correct format.
--- Author: Komodo794
--- Date: 2025-04-29
--- Notes: terrible code :skull:
+-- // builder.lua
+-- // Description: Transpile Lua code into a syntactically correct format.
+-- // Author: Komodo794
+-- // Date: 2025-04-29
+-- // Notes: terrible code :skull:
 
 local module = {}
 module.__index = module
@@ -28,7 +28,6 @@ local function functions(name, content, appendToStyle)
   if appendToStyle then
     currentStyle = appendToStyle
   end
-  --print(currentStyle)
   local FUNCTIONS = {
     title = function() return module:title(content[2]) end,
     header = function() return module:header(content[2], content[3], content["style"] or nil) end,
@@ -48,9 +47,7 @@ end
 
 -- // RETURN EVERY LINE INSIDE THE CURRENT PAGE HTML
 local function get_lines(page)
-  for line in page:lines() do
-    return line
-  end
+  return page.read(page)
 end
 
 -- // PUT CODE INSIDE A READABLE TABLE
@@ -318,7 +315,6 @@ function module:image(imageLink, width, height, style) -- <h1, h2, h3...></h>
     startTag = '<img src = "' ..
     imageLink .. '" width = "' .. width .. '" height = "' .. height .. '" class = "' .. style .. '">'
   end
-  print(startTag)
   if page then
     -- gets line and puts data in table
     pagestuff = append_tag(page, contents, pagestuff, nil, startTag, nil, "</body>")
