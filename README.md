@@ -28,10 +28,13 @@ local page = builder.create(content)
 - Paragraph
 - Horizontal Rule
 - Header
+- Image
+- Title
 
 ## Supported CSS Elements
 - Text Color
 - Background Color
 - Background Gradient
 - Padding
-
+- Text Align
+- Font
