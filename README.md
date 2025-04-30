@@ -10,7 +10,7 @@ Static website generator based on Lua 5.4
 - Simple syntax to get used to
 
 ## Getting Started
-To build a project, use any Lua interceptor of your choice, and make a new script. You will need to require the ```builder.lua``` module in this project. Below is an example of how it is setup
+To build a project, use any Lua interpreter of your choice, and make a new script. You will need to require the ```builder.lua``` module in this project. Below is an example of how it is setup
 ```lua
 local builder = require("builder")
 
@@ -23,3 +23,18 @@ local content = {
 
 local page = builder.create(content)
 ```
+
+## Supported HTML Elements
+- Paragraph
+- Horizontal Rule
+- Header
+- Image
+- Title
+
+## Supported CSS Elements
+- Text Color
+- Background Color
+- Background Gradient
+- Padding
+- Text Align
+- Font
