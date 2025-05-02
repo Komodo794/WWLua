@@ -24,14 +24,14 @@ local content = {
 local page = builder.create(content)
 ```
 
-## Supported HTML Elements
+## Support Elements
+### HTML
 - Paragraph
 - Horizontal Rule
 - Header
 - Image
 - Title
-
-## Supported CSS Elements
+### CSS
 - Text Color
 - Background Color
 - Background Gradient
